@@ -42,12 +42,12 @@ public class GamePanel extends JPanel implements ActionListener{
 	public void draw(Graphics g) {
 		
 		if(running) {
-			/*
+			
 			for(int i=0;i<SCREEN_HEIGHT/UNIT_SIZE;i++) {
 				g.drawLine(i*UNIT_SIZE, 0, i*UNIT_SIZE, SCREEN_HEIGHT);
 				g.drawLine(0, i*UNIT_SIZE, SCREEN_WIDTH, i*UNIT_SIZE);
 			}
-			*/
+			
 			g.setColor(Color.red);
 			g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
 		
@@ -112,19 +112,19 @@ public class GamePanel extends JPanel implements ActionListener{
 				running = false;
 			}
 		}
-		//check if head touches left border
+		//check if head touches left edge
 		if(x[0] < 0) {
 			running = false;
 		}
-		//check if head touches right border
+		//check if head touches right edge
 		if(x[0] > SCREEN_WIDTH) {
 			running = false;
 		}
-		//check if head touches top border
+		//check if head touches top edge
 		if(y[0] < 0) {
 			running = false;
 		}
-		//check if head touches bottom border
+		//check if head touches bottom edge
 		if(y[0] > SCREEN_HEIGHT) {
 			running = false;
 		}
